@@ -64,6 +64,15 @@
 			<version>3.2.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
 		<!-- <dependency> <groupId>org.hsqldb</groupId> <artifactId>hsqldb</artifactId> 
 			</dependency> <dependency> <groupId>ojdbc6</groupId> <artifactId>ojdbc6</artifactId> 
 			<version>1.0</version> <scope>system</scope> <systemPath>${basedir}/lib/ojdbc6-1.0.jar</systemPath> 
