@@ -11,7 +11,7 @@ public class WelcomeController {
 
 	@RequestMapping("/")
 	public String index() {
-		return "entry";
+		return "welcome";
 	}
 
 }
