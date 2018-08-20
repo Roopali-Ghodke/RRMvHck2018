@@ -14,4 +14,19 @@ public class WelcomeController {
 		return "entry";
 	}
 
+	@RequestMapping("/loginpage")
+	public String login() {
+		return "login";
+	}
+
+	@RequestMapping("/logoutpage")
+	public String logout() {
+		return "logout";
+	}
+
+	@RequestMapping("/statement")
+	public String statement() {
+		return "statement";
+	}
+
 }

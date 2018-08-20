@@ -10,7 +10,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 
-public class BusRouteTripDao {
+public class BusRouteTripDao { 
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
