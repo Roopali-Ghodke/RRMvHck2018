@@ -8,6 +8,6 @@
 
 
 <body>Logout
-
+<a href="loginpage">login</a>
 </body>
 </html>
