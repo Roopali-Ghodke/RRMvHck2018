@@ -6,7 +6,9 @@
 <title>Hello World!</title>
 </head>
 <body>
-	register card
+	Successfully Registered. 
+	
+	Please go to <a href="login">Home Page</a>
 	
 	
 	

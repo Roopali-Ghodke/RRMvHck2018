@@ -6,7 +6,14 @@
 <title>Hello World!</title>
 </head>
 <body>
-	register card
+	details
+	
+	<a href="purchase">Purchase a Card</a>
+	<a href="register">Register a Card</a>
+	<a href="topup">Top up or refill</a>
+	<a href="statement">Statement</a>
+	<a href="faq">FAQ</a>
+	<a href="contactus">Contact Us</a>
 	
 	
 	
