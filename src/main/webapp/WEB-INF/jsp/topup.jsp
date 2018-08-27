@@ -6,10 +6,14 @@
 <title>Hello World!</title>
 </head>
 <body>
+	<span><%@ include file="navigationtab.jsp"%></span>
+	<div>
+		</br> </br>
+	</div>
 	<h2>Top-Up a Card / Re-fill a Card</h2>
 	<div class="row">
 		<div class="col-md-4">
-			<table width="200%">
+			<table width="100%">
 				<tr>
 					<td><%@ include file="menu.jsp"%></td>
 				</tr>
@@ -22,17 +26,16 @@
 			<p>right details</p>
 		</div>
 	</div>
-	
-	
-	
-	<form action="logout" method="post">   
-	<input type="hidden"                        
-		name="${_csrf.parameterName}"
-		value="${_csrf.token}"/>
-	<button type="submit" class="btn">Log out</button>  
+
+
+
+	<form action="logout" method="post">
+		<input type="hidden" name="${_csrf.parameterName}"
+			value="${_csrf.token}" />
+		<button type="submit" class="btn">Log out</button>
 	</form>
 
-	
+
 
 </body>
 </html>

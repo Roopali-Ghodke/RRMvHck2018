@@ -3,12 +3,16 @@
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-<title>Hello World!</title>
+<title></title>
 </head>
 <body>
+	<span><%@ include file="navigationtab.jsp"%></span>
+	<div>
+		</br> </br>
+	</div>
 	<div class="row">
 		<div class="col-md-4">
-			<table width="200%">
+			<table width="100%">
 				<tr>
 					<td><%@ include file="menu.jsp"%></td>
 				</tr>

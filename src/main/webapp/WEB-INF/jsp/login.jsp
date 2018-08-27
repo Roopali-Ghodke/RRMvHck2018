@@ -20,13 +20,8 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
 
 <body>
-	<div class="header">
-		<a href="#default" class="logo">Smart Yatri Card</a>
-		<div class="header-right">
-			<a class="active" href="#home">Home</a> <a href="#contact">Contact</a>
-			<a href="#about">About</a>
-		</div>
-	</div>
+
+	<span><%@ include file="navigationtab.jsp"%></span>
 	<div></div>
 	<div class="container-fluid">
 
