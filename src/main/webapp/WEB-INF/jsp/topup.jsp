@@ -6,7 +6,22 @@
 <title>Hello World!</title>
 </head>
 <body>
-	statement
+	<h2>Top-Up a Card / Re-fill a Card</h2>
+	<div class="row">
+		<div class="col-md-4">
+			<table width="200%">
+				<tr>
+					<td><%@ include file="menu.jsp"%></td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<p>Center details</p>
+		</div>
+		<div class="col-md-4">
+			<p>right details</p>
+		</div>
+	</div>
 	
 	
 	
