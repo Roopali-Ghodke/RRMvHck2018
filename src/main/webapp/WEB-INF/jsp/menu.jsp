@@ -11,7 +11,7 @@
 	<div class="vertical-menu">
 		<a href="purchase">Purchase A Card</a>
 		<a href="register">Register A Card</a> 
-		<a href="topup">Top-Up/Re-Fill a Card</a> 
+		<a href="topup.do">Top-Up/Re-Fill a Card</a> 
 		<a href="statement.do">Statement</a> 
 		<a href="faq">FAQ</a> 
 		<a href="contactus">Contact Us</a>
