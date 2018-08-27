@@ -18,7 +18,7 @@ public class DataConfig {
 	@Autowired
 	private Environment env;
 
-	//@Bean
+	@Bean
 	public DataLoader dataLoader() throws Exception {
 		DataLoader dataLoader = new DataLoader();
 
