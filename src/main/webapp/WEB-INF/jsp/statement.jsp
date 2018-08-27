@@ -5,72 +5,73 @@
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-<title></title>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Smart Yatri Card</title>
+
+<link rel="stylesheet" href="/movehack/css/bootstrap.min.css" />
 </head>
 <body>
 	<span><%@ include file="navigationtab.jsp"%></span>
 	<div>
 		</br> </br>
 	</div>
-	<h2>Check statement</h2>
-	<div class="row">
-		<div class="col-md-3">
-			<table width="100%">
-				<tr>
-					<td><%@ include file="menu.jsp"%></td>
-				</tr>
-			</table>
-		</div>
-		<div class="col-md-9">
-		Balance = ${balance}
-			<table class="table table-striped">
-				<thead>
+	<div class="container">
+		<h2>Check statement</h2>
+		<div class="row">
+			<div class="col-md-3">
+				<table width="100%">
 					<tr>
-						<th>Card Number</th>
-						<th>Date Of Travel</th>
-						<th>Transaction Type</th>
-						<th>Transport</th>
-						<th>Source (From Station)</th>
-						<th>Destination (To Station)</th>
-						<th>Amount</th>
+						<td><%@ include file="menu.jsp"%></td>
 					</tr>
-				</thead>
-				<c:forEach items="${cardStatements}" var="cardStatements">
-					<tr>
-						<td>${cardStatements.card_id}</td>
-						<td>${cardStatements.date}</td>
-						<td><c:choose>
-								<c:when test="${cardStatements.is_topup != 'N'}">
+				</table>
+			</div>
+			<div class="col-md-9">
+				<div class="card bg-light text-black">
+					<div class="card-body"><h2>Total Balance on the card is <span class="glyphicons glyphicons-usd"> </span>${balance} </h2></div>
+				</div>
+				<br>
+				
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Card Number</th>
+							<th>Date Of Travel</th>
+							<th>Transaction Type</th>
+							<th>Transport</th>
+							<th>Source (From Station)</th>
+							<th>Destination (To Station)</th>
+							<th>Amount</th>
+						</tr>
+					</thead>
+					<c:forEach items="${cardStatements}" var="cardStatements">
+						<tr>
+							<td>${cardStatements.card_id}</td>
+							<td>${cardStatements.date}</td>
+							<td><c:choose>
+									<c:when test="${cardStatements.is_topup != 'N'}">
 									Top-Up Successfully Done.
 								</c:when>
-								<c:otherwise>
+									<c:otherwise>
 									Travel Transaction
 								</c:otherwise>
-							</c:choose></td>
-						<td>${cardStatements.transport}</td>
-						<td>${cardStatements.from}</td>
-						<td>${cardStatements.to}</td>
-						<td><c:choose>
-								<c:when test="${cardStatements.is_topup == 'Y'}">
+								</c:choose></td>
+							<td>${cardStatements.transport}</td>
+							<td>${cardStatements.from}</td>
+							<td>${cardStatements.to}</td>
+							<td><c:choose>
+									<c:when test="${cardStatements.is_topup == 'Y'}">
 									(+) ${cardStatements.amount}
 								</c:when>
-								<c:otherwise>
+									<c:otherwise>
 									(-) ${cardStatements.amount}
 								</c:otherwise>
-							</c:choose></td>
-					</tr>
-				</c:forEach>
-			</table>
+								</c:choose></td>
+						</tr>
+					</c:forEach>
+				</table>
+			</div>
 		</div>
+
 	</div>
-
-
 
 	<form action="logout" method="post">
 		<input type="hidden" name="${_csrf.parameterName}"
