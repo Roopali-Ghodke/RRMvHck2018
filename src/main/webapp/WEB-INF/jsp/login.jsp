@@ -59,29 +59,31 @@
 							<h5 class="card-title">Sign-In for Smart Yatri Card</h5>
 							<c:url value="/loginpage" var="loginUrl" />
 							<form action="${loginUrl}" method="post">
+							
 								<c:if test="${param.error != null}">
 									<p>Invalid username and password.</p>
 								</c:if>
+								
 								<c:if test="${param.logout != null}">
 									<p>You have been logged out.</p>
 								</c:if>
+								
 								<div class="form-group">
-									<label for="username">User Name </label> <input type="text"
-										id="username" aria-describedby="username"
+									<label for="username">User Name </label> 
+									<input type="text" id="username" name="username" aria-describedby="username"
 										placeholder="Enter Username" />
 								</div>
 
 								<div class="form-group">
-									<label for="password">Password </label> <input type="password"
-										id="password" aria-describedby="password"
+									<label for="password">Password </label> 
+									<input type="password" id="password" name="password" aria-describedby="password"
 										placeholder="Enter Password" />
 								</div>
 
 								<input type="hidden" name="${_csrf.parameterName}"
 									value="${_csrf.token}" />
-								<button type="submit" class="btn btn-primary"
-									data-toggle="button" aria-pressed="false" autocomplete="off">Log
-									in</button>
+									<button type="submit" class="btn btn-primary" aria-pressed="false" autocomplete="off">Log-In</button> 
+								
 							</form>
 						</div>
 						<div class="card-footer text-muted">No Account? Please
