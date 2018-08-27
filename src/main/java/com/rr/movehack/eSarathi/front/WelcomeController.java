@@ -48,6 +48,7 @@ public class WelcomeController {
 	public String path(@PathVariable("path") String path) {
 		return path;
 	}
+	
 
 	@RequestMapping("/profile.do")
 	public ModelAndView profile() {

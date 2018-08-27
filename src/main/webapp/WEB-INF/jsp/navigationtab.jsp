@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
@@ -11,10 +13,17 @@
 	<div class="header">
 		<a href="#default" class="logo">Smart Yatri Card</a>
 		<div class="header-right">
-			<a class="active" href="#home">Home</a> <a href="#contact">Contact</a>
-			<a href="#about">About</a>
+			<c:url value="/login" var="loginUrl" />
+			<a href="${loginUrl }">Home</a> 
+			
+			<c:url value="/contact" var="contactUrl" />
+			<a href="${contactUrl }">Contact</a>
+			
+			<c:url value="/aboutus" var="aboutUrl" />
+			<a href="${aboutUrl }">About Us</a>
+
 		</div>
-	</div>	
+	</div>
 
 </body>
 </html>
