@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+ <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
@@ -60,7 +61,19 @@
 						<div class="profile-info-name">Smart Yatri Card Number</div>
 
 						<div class="profile-info-value">
-							<span>${userProfile['card_number'] }</span>
+							<span>
+								 <c:if test="${(not empty userProfile['is_purchased']) && (userProfile['is_purchased'] == 'Y')}">
+									<c:if test="${(not empty userProfile['card_number']) && (userProfile['is_purchased'] == 'Y')}">
+										${userProfile['card_number'] }
+									</c:if>
+									<c:if test="${(empty userProfile['card_number']) || (userProfile['is_purchased'] == 'N')}">
+										Please register the card
+									</c:if>
+								</c:if>
+								 <c:if test="${(empty userProfile['is_purchased']) || (userProfile['is_purchased'] == 'N')}">
+									Please Purchase a card.
+								</c:if>   
+							</span>
 						</div>
 					</div>
 				</div>
