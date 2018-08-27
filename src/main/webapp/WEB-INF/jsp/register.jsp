@@ -24,26 +24,34 @@
 		<div class="col-md-4">
 			<p>
 			<p>
-				<c:if test="${status eq 'success'}">
-					<p>Registration done successfully</p>
+
+				<c:if test="${alreadyRegistered eq 'true'}">
+					<p>Already registered</p>
 				</c:if>
-			<h3>Enter registration details</h3>
+				<c:if test="${status eq 'success'}">
+						<p>Registration done successfully</p>
+					</c:if>
+				<c:if test="${alreadyRegistered ne 'true' && status ne 'success'}">
+					
+					<h3>Enter registration details</h3>
 
-			<c:url value="/registercard" var="registerUrl" />
-			<form:form method="POST" action="${registerUrl}"
-				modelAttribute="command">
-				<table>
-					<tr>
-						<td><form:label path="cardNumber">Card Number</form:label></td>
-						<td><form:input path="cardNumber" /></td>
-					</tr>
+					<c:url value="/registercard" var="registerUrl" />
+					<form:form method="POST" action="${registerUrl}"
+						modelAttribute="command">
+						<table>
+							<tr>
+								<td><form:label path="cardNumber">Card Number</form:label></td>
+								<td><form:input path="cardNumber" /></td>
+							</tr>
 
-					<tr>
-						<td><input type="submit" value="Submit" /></td>
-					</tr>
-				</table>
-			</form:form>
+							<tr>
+								<td><input type="submit" value="Submit" /></td>
+							</tr>
+						</table>
+					</form:form>
+				</c:if>
 			</p>
+
 			</p>
 		</div>
 		<div class="col-md-4">

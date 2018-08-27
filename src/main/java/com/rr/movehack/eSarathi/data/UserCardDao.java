@@ -1,11 +1,12 @@
 package com.rr.movehack.eSarathi.data;
 
-import java.util.Date;
+import java.util.Collections;
 import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class UserCardDao {
@@ -33,9 +34,13 @@ public class UserCardDao {
 	public Map<String, Object> getUserData(String userName) {
 		LOGGER.debug("############# Petting profile = " + userName);
 
-		String userQuery = "select u.*,c.* from user u, card c where c.user_id=u.id and  u.user_name='" + userName + "'";
-
-		return jdbcTemplate.queryForMap(userQuery);
+		String userQuery = "select u.*,c.* from user u, card c where c.user_id=u.id and  u.user_name='" + userName
+				+ "'";
+		try {
+			return jdbcTemplate.queryForMap(userQuery);
+		} catch (EmptyResultDataAccessException e) {
+			return Collections.emptyMap();
+		}
 
 	}
 }
