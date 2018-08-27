@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class AuthUserDetailsService implements UserDetailsService {
 
-	private static final Logger LOGGER = LogManager.getLogger(AuthUserDetailsService.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(AuthUserDetailsService.class);
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -38,7 +38,7 @@ public class AuthUserDetailsService implements UserDetailsService {
 				UserBuilder users = User.withDefaultPasswordEncoder();
 				UserDetails user = null;
 				while (resultSetObj.next()) {
-					System.out.println("############# LOADED  = " + resultSetObj.getString("first_name"));
+					LOGGER.debug("############# LOADED  = " + resultSetObj.getString("first_name"));
 					List<GrantedAuthority> authority = new ArrayList<>();
 					authority.add(new SimpleGrantedAuthority("USER"));
 					user = users.username(resultSetObj.getString("user_name"))
