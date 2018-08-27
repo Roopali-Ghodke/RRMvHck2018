@@ -1,0 +1,22 @@
+ var request={
+ 	"cardNumber":"1234567890",
+
+	"transportName":"Delhi Metro",
+
+	"fromLocation":"Noida",
+
+	"toLocation":"Mayur Vihar",
+
+	"amount":15,
+
+	"travelTimeDate":"8/20/2018"
+ };
+ var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+         if (this.readyState == 4 && this.status == 200) {
+             console.log(this.responseText);
+         }
+    };
+    xhttp.open("POST", "/movehack/api/charge", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(request));

@@ -29,16 +29,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
  
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-    	http.userDetailsService(userDetailsService())	
+    	http.userDetailsService(userDetailsService())
+    	.csrf().disable()
 		.authorizeRequests()
 			/*.antMatchers( "/resources/**" ,             
                 "/css/**").permitAll()*/
-		.antMatchers( "/signup","/loginpage**").permitAll()	
+		.antMatchers( "/signup","/loginpage**","/api/**").permitAll()	
 		.anyRequest().authenticated()
 			.and()
 		.formLogin()
 			.loginPage("/loginpage") 
-			.defaultSuccessUrl("/details")
+			.defaultSuccessUrl("/details",true)
 			.failureUrl("/loginpage?error=y")
 			.permitAll()
 		.and()
