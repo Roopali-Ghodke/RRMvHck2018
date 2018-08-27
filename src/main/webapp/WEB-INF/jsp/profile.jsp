@@ -3,10 +3,10 @@
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-<title>Hello World!</title>
+<title>Smart Yatri Card</title>
 </head>
 <body>
-	<h2>Check statement</h2>
+	<h2>Profile</h2>
 	<div class="row">
 		<div class="col-md-4">
 			<table width="200%">
@@ -17,12 +17,10 @@
 		</div>
 		<div class="col-md-4">
 			<p>Center details</p>---
-			${cardStatements[0].card_id}
-			${cardStatements[0].date}
-			${cardStatements[0].is_topup}
-			${cardStatements[0].from}
-			${cardStatements[0].to}
-			${cardStatements[0].amount}
+			First Name ${userProfile['first_name'] }
+			Last Name ${userProfile['last_name'] }
+			Address ${userProfile['address'] }
+			Card Number ${userProfile['card_number'] }
 			
 		</div>
 		<div class="col-md-4">

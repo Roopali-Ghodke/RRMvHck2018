@@ -1,17 +1,31 @@
 package com.rr.movehack.eSarathi.front;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.rr.movehack.eSarathi.data.UserCardDao;
+import com.rr.movehack.eSarathi.data.model.CardStatement;
 
 @Controller
 public class WelcomeController {
+
+	@Autowired
+	private UserCardDao userCardDao;
 
 	@RequestMapping("/")
 	public String index() {
 		return "login";
 	}
-	
+
 	@RequestMapping("/signuppage")
 	public String signup() {
 		return "signup";
@@ -31,12 +45,17 @@ public class WelcomeController {
 	public String path(@PathVariable("path") String path) {
 		return path;
 	}
-	
-/*
-	@RequestMapping("/statement")
-	public String statement() {
-		return "statement";
-	}*/
-	
+
+	@RequestMapping("/profile.do")
+	public ModelAndView profile() {
+
+		ModelAndView modelAndView = new ModelAndView("profile");
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		Map<String, Object> userProfile = userCardDao.getUserData(auth.getName());
+
+		modelAndView.addObject("userProfile", userProfile);
+		return modelAndView;
+
+	}
 
 }

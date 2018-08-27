@@ -13,6 +13,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import com.rr.movehack.eSarathi.data.BusRouteTripDao;
 import com.rr.movehack.eSarathi.data.DataLoader;
 import com.rr.movehack.eSarathi.data.StatementDao;
+import com.rr.movehack.eSarathi.data.UserCardDao;
 
 @Configuration
 public class DataConfig {
@@ -51,5 +52,10 @@ public class DataConfig {
 	@Bean
 	public StatementDao statementDao() {
 		return new StatementDao();
+	}
+
+	@Bean
+	public UserCardDao userCardDao() {
+		return new UserCardDao();
 	}
 }

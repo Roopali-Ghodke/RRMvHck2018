@@ -9,8 +9,9 @@
 </head>
 <body>
 	<div class="vertical-menu">
+		<a href="profile.do">Profile</a> 
 		<a href="purchase">Purchase A Card</a>
-		<a href="register">Register A Card</a> 
+		<a href="register.do">Register A Card</a> 
 		<a href="topup.do">Top-Up/Re-Fill a Card</a> 
 		<a href="statement.do">Statement</a> 
 		<a href="faq">FAQ</a> 

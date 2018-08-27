@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
@@ -16,13 +18,35 @@
 			</table>
 		</div>
 		<div class="col-md-4">
-			<p>Center details</p>
+			<p>
+			<p>
+				<c:if test="${status eq 'success'}">
+					<p>Registration done successfully</p>
+				</c:if>
+			<h3>Enter registration details</h3>
+
+			<c:url value="/registercard" var="registerUrl" />
+			<form:form method="POST" action="${registerUrl}"
+				modelAttribute="command">
+				<table>
+					<tr>
+						<td><form:label path="cardNumber">Card Number</form:label></td>
+						<td><form:input path="cardNumber" /></td>
+					</tr>
+
+					<tr>
+						<td><input type="submit" value="Submit" /></td>
+					</tr>
+				</table>
+			</form:form>
+			</p>
+			</p>
 		</div>
 		<div class="col-md-4">
 			<p>right details</p>
 		</div>
 	</div>
-	
+
 	<form action="logout" method="post">
 		<input type="hidden" name="${_csrf.parameterName}"
 			value="${_csrf.token}" />
