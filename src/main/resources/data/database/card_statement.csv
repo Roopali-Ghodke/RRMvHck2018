@@ -1,5 +1,7 @@
- card_id , date,is_topup , from_location , to_location , amount 
-1,1/1/2018,Y,,,100
-1,2/1/2018,N,Noida,Delhi,20
-1,2/1/2018,N,Delhi,Noida,20
-2,2/2/2018,Y,,,200
+card_id , date,is_topup , from_location , to_location , amount ,transport
+1,1/1/2018,Y,,,100,
+1,2/1/2018,N,Sector 3 Noida,Mayur Vihar Noida,20,Bus A1
+1,2/1/2018,N,Mayur Vihar Noida,Rajiv Chowk Delhi,30,Metro
+1,2/1/2018,N,Rajiv Chowk Delhi,Mayur Vihar Noida,30,Metro
+1,2/1/2018,N,Mayur Vihar Noida,Sector 3 Noida,20,Bus B3
+2,2/2/2018,Y,,,200,

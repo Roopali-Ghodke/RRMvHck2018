@@ -43,6 +43,8 @@ public class StatementDao {
 					cardStatement.setFrom(resultSetObj.getString("from_location"));
 					cardStatement.setTo(resultSetObj.getString("to_location"));
 					cardStatement.setIs_topup(resultSetObj.getString("is_topup"));
+					cardStatement.setTransport(resultSetObj.getString("transport"));
+
 					cardStatements.add(cardStatement);
 
 				}

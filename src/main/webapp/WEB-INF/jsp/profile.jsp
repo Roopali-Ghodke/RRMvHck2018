@@ -16,11 +16,16 @@
 			</table>
 		</div>
 		<div class="col-md-4">
-			<p>Center details</p>---
-			First Name ${userProfile['first_name'] }
-			Last Name ${userProfile['last_name'] }
-			Address ${userProfile['address'] }
-			Card Number ${userProfile['card_number'] }
+			<p>Center details</p>
+			Welcome ${userProfile['first_name'] } !
+			
+			<br/>
+			Your Details:<br/>
+			
+			First Name ${userProfile['first_name'] }<br/>
+			Last Name ${userProfile['last_name'] }<br/>
+			Address ${userProfile['address'] }<br/>
+			Card Number ${userProfile['card_number'] }<br/>
 			
 		</div>
 		<div class="col-md-4">

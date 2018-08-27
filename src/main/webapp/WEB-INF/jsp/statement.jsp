@@ -28,12 +28,14 @@
 			</table>
 		</div>
 		<div class="col-md-9">
+		Balance = ${balance}
 			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>Card Number</th>
 						<th>Date Of Travel</th>
-						<th>Is Top Up Done</th>
+						<th>Transaction Type</th>
+						<th>Transport</th>
 						<th>Source (From Station)</th>
 						<th>Destination (To Station)</th>
 						<th>Amount</th>
@@ -51,14 +53,15 @@
 									Travel Transaction
 								</c:otherwise>
 							</c:choose></td>
+						<td>${cardStatements.transport}</td>
 						<td>${cardStatements.from}</td>
 						<td>${cardStatements.to}</td>
 						<td><c:choose>
 								<c:when test="${cardStatements.is_topup == 'Y'}">
-									${cardStatements.amount}+
+									(+) ${cardStatements.amount}
 								</c:when>
 								<c:otherwise>
-									${cardStatements.amount}-
+									(-) ${cardStatements.amount}
 								</c:otherwise>
 							</c:choose></td>
 					</tr>

@@ -1,4 +1,5 @@
-id,user_name,password,first_name,last_name,address
-1,u,p,Roopali,Ghodke,San Leandro
-2,r,p,Ravi,Kharatmal,San Leandro
-3,uu,p,Rugved,Kharatmal,San Leandro
+id,user_name,password,first_name,last_name,address,is_purchased
+1,u,p,Roopali,Ghodke,San Leandro,Y
+2,r,p,Ravi,Kharatmal,San Leandro,Y
+3,uu,p,Rugved,Kharatmal,San Leandro,Y
+4,rr,p,Jay,C,Mumbai,N

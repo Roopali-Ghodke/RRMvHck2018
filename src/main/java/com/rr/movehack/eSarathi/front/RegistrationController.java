@@ -34,6 +34,7 @@ public class RegistrationController {
 		Map<String, Object> user = userCardDao.getUserData(auth.getName());
 
 		mav.addObject("alreadyRegistered", (user.get("card_number") != null));
+		mav.addObject("alreadyPurchased", (user.get("is_purchased") != null && "Y".equals(user.get("is_purchased"))));
 
 		return mav;
 
