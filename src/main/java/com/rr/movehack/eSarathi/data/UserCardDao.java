@@ -43,4 +43,11 @@ public class UserCardDao {
 		}
 
 	}
+
+	public void purchase(String userName) {
+		LOGGER.debug("############# Purchase= " + userName);
+
+		jdbcTemplate.update("update user set is_purchased='Y' where user_name=?", userName);
+	}
+
 }

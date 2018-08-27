@@ -28,10 +28,14 @@
 				<c:if test="${alreadyRegistered eq 'true'}">
 					<p>Already registered</p>
 				</c:if>
+				
+				<c:if test="${alreadyPurchased ne 'true'}">
+					<p>Card not yet purchased</p>
+				</c:if>
 				<c:if test="${status eq 'success'}">
 						<p>Registration done successfully</p>
 					</c:if>
-				<c:if test="${alreadyRegistered ne 'true' && status ne 'success'}">
+				<c:if test="${alreadyRegistered ne 'true' && status ne 'success' && alreadyPurchased eq 'true'}">
 					
 					<h3>Enter registration details</h3>
 
