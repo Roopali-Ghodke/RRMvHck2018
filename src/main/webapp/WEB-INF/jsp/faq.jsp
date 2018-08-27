@@ -10,24 +10,25 @@
 	<div>
 		</br> </br>
 	</div>
-	<h2>Frequently Asked Questions ( FAQ )</h2>
-	<div class="row">
-		<div class="col-md-4">
-			<table width="100%">
-				<tr>
-					<td><%@ include file="menu.jsp"%></td>
-				</tr>
-			</table>
+	<div class="container">
+		<h2>Frequently Asked Questions ( FAQ )</h2>
+		<div class="row">
+			<div class="col-md-4">
+				<table width="100%">
+					<tr>
+						<td><%@ include file="menu.jsp"%></td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-md-4">
+				<p>Center details</p>
+			</div>
+			<div class="col-md-4">
+				<p>right details</p>
+			</div>
 		</div>
-		<div class="col-md-4">
-			<p>Center details</p>
-		</div>
-		<div class="col-md-4">
-			<p>right details</p>
-		</div>
+
 	</div>
-
-
 
 	<form action="logout" method="post">
 		<input type="hidden" name="${_csrf.parameterName}"

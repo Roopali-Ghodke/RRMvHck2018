@@ -12,6 +12,7 @@
 	<div>
 		</br> </br>
 	</div>
+	<span><%@ include file="logoutlink.jsp"%></span>
 	<div class="container">
 		<h2>Purchase a Card</h2>
 		<div class="row">

@@ -12,54 +12,58 @@
 	<div>
 		</br> </br>
 	</div>
-	<h2>Register a Card</h2>
-	<div class="row">
-		<div class="col-md-">
-			<table width="100%">
-				<tr>
-					<td><%@ include file="menu.jsp"%></td>
-				</tr>
-			</table>
-		</div>
-		<div class="col-md-4">
-			<p>
-			<p>
+	<span><%@ include file="logoutlink.jsp"%></span>
+	<div class="container">
+		<h2>Register a Card</h2>
+		<div class="row">
+			<div class="col-md-">
+				<table width="100%">
+					<tr>
+						<td><%@ include file="menu.jsp"%></td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-md-4">
+				<p>
+				<p>
 
-				<c:if test="${alreadyRegistered eq 'true'}">
-					<p>Already registered</p>
-				</c:if>
-				
-				<c:if test="${alreadyPurchased ne 'true'}">
-					<p>Card not yet purchased</p>
-				</c:if>
-				<c:if test="${status eq 'success'}">
+					<c:if test="${alreadyRegistered eq 'true'}">
+						<p>Already registered</p>
+					</c:if>
+
+					<c:if test="${alreadyPurchased ne 'true'}">
+						<p>Card not yet purchased</p>
+					</c:if>
+					<c:if test="${status eq 'success'}">
 						<p>Registration done successfully</p>
 					</c:if>
-				<c:if test="${alreadyRegistered ne 'true' && status ne 'success' && alreadyPurchased eq 'true'}">
-					
-					<h3>Enter registration details</h3>
+					<c:if
+						test="${alreadyRegistered ne 'true' && status ne 'success' && alreadyPurchased eq 'true'}">
 
-					<c:url value="/registercard" var="registerUrl" />
-					<form:form method="POST" action="${registerUrl}"
-						modelAttribute="command">
-						<table>
-							<tr>
-								<td><form:label path="cardNumber">Card Number</form:label></td>
-								<td><form:input path="cardNumber" /></td>
-							</tr>
+						<h3>Enter registration details</h3>
 
-							<tr>
-								<td><input type="submit" value="Submit" /></td>
-							</tr>
-						</table>
-					</form:form>
-				</c:if>
-			</p>
+						<c:url value="/registercard" var="registerUrl" />
+						<form:form method="POST" action="${registerUrl}"
+							modelAttribute="command">
+							<table>
+								<tr>
+									<td><form:label path="cardNumber">Card Number</form:label></td>
+									<td><form:input path="cardNumber" /></td>
+								</tr>
 
-			</p>
-		</div>
-		<div class="col-md-4">
-			<p>right details</p>
+								<tr>
+									<td><input type="submit" value="Submit" /></td>
+								</tr>
+							</table>
+						</form:form>
+					</c:if>
+				</p>
+
+				</p>
+			</div>
+			<div class="col-md-4">
+				<p>right details</p>
+			</div>
 		</div>
 	</div>
 
