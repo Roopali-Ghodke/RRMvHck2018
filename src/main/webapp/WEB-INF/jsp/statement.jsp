@@ -58,10 +58,10 @@
 						<td>${cardStatements.to}</td>
 						<td><c:choose>
 								<c:when test="${cardStatements.is_topup == 'Y'}">
-									${cardStatements.amount}+
+									(+) ${cardStatements.amount}
 								</c:when>
 								<c:otherwise>
-									${cardStatements.amount}-
+									(-) ${cardStatements.amount}
 								</c:otherwise>
 							</c:choose></td>
 					</tr>
