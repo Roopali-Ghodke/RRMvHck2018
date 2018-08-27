@@ -27,7 +27,7 @@
 				</tr>
 			</table>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-9">
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -44,11 +44,11 @@
 						<td>${cardStatements.card_id}</td>
 						<td>${cardStatements.date}</td>
 						<td><c:choose>
-								<c:when test="${cardStatements.is_topup == 'Y'}">
-									<p>Top-Up Successfully Done.</p>
-								</c:when> ${cardStatements.is_topup}
+								<c:when test="${cardStatements.is_topup != 'N'}">
+									Top-Up Successfully Done.
+								</c:when>
 								<c:otherwise>
-									<p>No</p>
+									Travel Transaction
 								</c:otherwise>
 							</c:choose></td>
 						<td>${cardStatements.from}</td>
@@ -65,11 +65,6 @@
 				</c:forEach>
 			</table>
 		</div>
-		<div class="col-md-3">
-			<p>Right details</p>
-
-		</div>
-
 	</div>
 
 
