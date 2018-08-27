@@ -7,6 +7,7 @@ public class CardStatement {
 	private String from;
 	private String to;
 	private String amount;
+	private String transport;
 
 	public String getCard_id() {
 		return card_id;
@@ -58,7 +59,15 @@ public class CardStatement {
 
 	@Override
 	public String toString() {
-		return "STATEMENT = " + getCard_id() + " " + getAmount() + " " + getDate() + " " + getFrom() + " " + getTo() + " "
-				+ getIs_topup() + " ||| ";
+		return "STATEMENT = " + getCard_id() + " " + getAmount() + " " + getDate() + " " + getFrom() + " " + getTo()
+				+ " " + getIs_topup() + " ||| ";
+	}
+
+	public String getTransport() {
+		return transport;
+	}
+
+	public void setTransport(String transport) {
+		this.transport = transport;
 	}
 }

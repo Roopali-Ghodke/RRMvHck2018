@@ -23,7 +23,16 @@ public class StatementController {
 		ModelAndView modelAndView = new ModelAndView("statement");
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		List<CardStatement> cardStatements = statementDao.getStatement(auth.getName());
+
+		double topups = cardStatements.stream().filter(cs -> (cs.getIs_topup() != null && "Y".equals(cs.getIs_topup())))
+				.mapToDouble(cs -> Double.parseDouble(cs.getAmount())).sum();
+
+		double deductions = cardStatements.stream()
+				.filter(cs -> (cs.getIs_topup() == null || !"Y".equals(cs.getIs_topup())))
+				.mapToDouble(cs -> Double.parseDouble(cs.getAmount())).sum();
+
 		modelAndView.addObject("cardStatements", cardStatements);
+		modelAndView.addObject("balance", topups - deductions);
 		return modelAndView;
 	}
 
