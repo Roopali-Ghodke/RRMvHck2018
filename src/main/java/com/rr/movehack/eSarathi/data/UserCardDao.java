@@ -9,11 +9,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import com.rr.movehack.eSarathi.data.model.User;
+
 public class UserCardDao {
 	private static final Logger LOGGER = LogManager.getLogger(StatementDao.class);
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
+
+	public void createUser(User user) {
+		String maxCardIdQuery = "select max(id) as maxIdValue from user ";
+		Map<String, Object> maxCardIdMap = jdbcTemplate.queryForMap(maxCardIdQuery);
+		String maxIdValue = (String) maxCardIdMap.get("maxIdValue");
+		LOGGER.debug("Creating user = " + maxIdValue + " " + user);
+
+		jdbcTemplate.update(
+				"INSERT INTO user (id,user_name,password,first_name,last_name,address,is_purchased ) VALUES (?,?,?,?,?,?,?)",
+				Integer.parseInt(maxIdValue) + 1, user.getUserName(), user.getPassword(), user.getFirstName(),
+				user.getLastName(), user.getAddress() + " " + user.getCity() + " " + user.getState(),"N");
+	}
 
 	public void register(String userName, String cardNumber) {
 		LOGGER.debug("############# Topping up statement = " + userName);
@@ -32,9 +46,9 @@ public class UserCardDao {
 	}
 
 	public Map<String, Object> getUserData(String userName) {
-		LOGGER.debug("############# Petting profile = " + userName);
+		LOGGER.debug("############# Getting profile = " + userName);
 
-		String userQuery = "select u.*,c.* from user u, card c where c.user_id=u.id and  u.user_name='" + userName
+		String userQuery = "select u.*,c.* from user u left join card c on c.user_id=u.id where u.user_name='" + userName
 				+ "'";
 		try {
 			return jdbcTemplate.queryForMap(userQuery);

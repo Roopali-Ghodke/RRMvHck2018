@@ -8,8 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/movehack/css/welcomeStyle.css" />
 <link rel="stylesheet" href="/movehack/css/bootstrap.min.css" />
-<script src="/js/jquery-3.3.1.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+<script src="/movehack/js/jquery-3.3.1.min.js"></script>
+<script src="/movehack/js/bootstrap.min.js"></script>
 </head>
 
 
@@ -28,11 +28,9 @@
 
 		<div class="row">
 			<div class="col-md-3">
-				<a href="signup">Sign Up</a>
+				<a href="signup.do">Sign Up</a>
 			</div>
-			<div class="col-md-3">
-				<p>Order the card</p>
-			</div>
+
 			<div class="col-md-3">
 				<p>Use the card</p>
 

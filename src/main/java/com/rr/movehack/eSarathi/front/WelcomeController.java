@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -17,6 +19,7 @@ import com.rr.movehack.eSarathi.data.model.CardStatement;
 
 @Controller
 public class WelcomeController {
+	private static final Logger LOGGER = LogManager.getLogger(WelcomeController.class);
 
 	@Autowired
 	private UserCardDao userCardDao;
@@ -52,7 +55,7 @@ public class WelcomeController {
 		ModelAndView modelAndView = new ModelAndView("profile");
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		Map<String, Object> userProfile = userCardDao.getUserData(auth.getName());
-
+		LOGGER.debug("User Profile = " + userProfile);
 		modelAndView.addObject("userProfile", userProfile);
 		return modelAndView;
 
