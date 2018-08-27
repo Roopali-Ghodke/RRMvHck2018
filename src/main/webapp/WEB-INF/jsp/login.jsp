@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Smart Yatri Card	</title>
+<title>Smart Yatri Card</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/movehack/css/welcomeStyle.css" />
 <link rel="stylesheet" href="/movehack/css/bootstrap.min.css" />
-<script  src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 </head>
 
@@ -20,13 +20,8 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
 
 <body>
-	<div class="header">
-		<a href="#default" class="logo">Smart Yatri Card</a>
-		<div class="header-right">
-			<a class="active" href="#home">Home</a> <a href="#contact">Contact</a>
-			<a href="#about">About</a>
-		</div>
-	</div>
+
+	<span><%@ include file="navigationtab.jsp"%></span>
 	<div></div>
 	<div class="container-fluid">
 

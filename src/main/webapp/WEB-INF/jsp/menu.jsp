@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/movehack/css/menuStyle.css" />
 </head>
 <body>
+	
 	<div class="vertical-menu">
 		<a href="profile.do">Profile</a> 
 		<a href="purchase">Purchase A Card</a>
