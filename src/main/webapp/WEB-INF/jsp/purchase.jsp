@@ -42,7 +42,7 @@
 								<small id="name" class="form-text text-muted"> (Enter
 									Card Details for purchasing, Ex- Amount = Rs 100.00/-) </small>
 							</div>
-							<c:url value="/purchaseCard" var="payUrl" />
+							<c:url value="/purchaseCard" var="purchaseUrl" />
 							<form:form method="POST" action="${purchaseUrl}"
 								modelAttribute="command">
 								<div class="form-group">

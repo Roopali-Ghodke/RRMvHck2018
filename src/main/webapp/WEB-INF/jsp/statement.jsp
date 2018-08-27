@@ -24,9 +24,9 @@
 					</tr>
 				</table>
 			</div>
-			<div class="col-md-9">
-				<div class="card bg-light text-black">
-					<div class="card-body"><h2>Total Balance on the card is <span class="glyphicons glyphicons-usd"> </span>${balance} </h2></div>
+			<div class="col-sm-9">
+				<div class="card bg-light text-black" style="background-color:#8377">
+					<div class="card-body"><h3>Total Balance on the card is Rs.${balance} </h3></div>
 				</div>
 				<br>
 				
@@ -43,7 +43,7 @@
 						</tr>
 					</thead>
 					<c:forEach items="${cardStatements}" var="cardStatements">
-						<tr>
+						<tr style="font-size:80%">
 							<td>${cardStatements.card_id}</td>
 							<td>${cardStatements.date}</td>
 							<td><c:choose>
