@@ -22,47 +22,64 @@
 				</tr>
 			</table>
 		</div>
-		<div class="col-md-4">
-			<p>
-				<c:if test="${status eq 'success'}">
-					<p>Payment done successfully.</p>
-				</c:if>
-			<h3>Enter payment details</h3>
+			<div class="col-md-6">
+				<p>
+					<c:if test="${status eq 'success'}">
+						<p>Payment done successfully.</p>
+					</c:if>
+				<h3>Enter Card Details</h3>
 
-<c:url value="/pay" var="payUrl" />
-			<form:form method="POST" action="${payUrl}" modelAttribute="command">
-				<table>
-					<tr>
-						<td><form:label path="name">name</form:label></td>
-						<td><form:input path="name" /></td>
-					</tr>
-					<tr>
-						<td><form:label path="amount">amount</form:label></td>
-						<td><form:input path="amount" /></td>
-					</tr>
-					<tr>
-						<td><form:label path="creditCardNumber">creditCardNumber</form:label></td>
-						<td><form:input path="creditCardNumber" /></td>
-					</tr>
-					<tr>
-						<td><form:label path="creditCardExpiry">creditCardExpiry</form:label></td>
-						<td><form:input path="creditCardExpiry" /></td>
-					</tr>
-					<tr>
-						<td><form:label path="creditCardCVV">
-                      creditCardCVV</form:label></td>
-						<td><form:input path="creditCardCVV" /></td>
-					</tr>
-					<tr>
-						<td><input type="submit" value="Submit" /></td>
-					</tr>
-				</table>
-			</form:form>
-			</p>
-		</div>
-		<div class="col-md-4">
-			<p>right details</p>
-		</div>
+				<c:url value="/pay" var="payUrl" />
+				<form:form method="POST" action="${payUrl}" modelAttribute="command">
+					<div class="form-group">
+						<form:label path="name">CardHolder Name</form:label>
+						<form:input path="name" type="text" class="form-control" id="name"
+							aria-describedby="name" placeholder="Cardholder Name" />
+						<small id="name" class="form-text text-muted"> (As written
+							on card)</small>
+					</div>
+					<div class="form-group">
+						<form:label path="amount">Add Amount</form:label>
+						<form:input path="amount" type="number" class="form-control"
+							id="amount" aria-describedby="amount" placeholder="100.00" />
+						<small id="amount" class="form-text text-muted">(Add
+							amount to the card)</small>
+					</div>
+					<div class="form-group">
+						<form:label path="creditCardNumber">Credit Card Number</form:label>
+						<form:input path="creditCardNumber" type="number"
+							class="form-control" id="creditCardNumber"
+							aria-describedby="creditCardNumber"
+							placeholder="Credit Card Number" />
+						<small id="creditCardNumber" class="form-text text-muted">(Enter
+							Credit Card Number displayed on your card)</small>
+					</div>
+					<div class="form-group">
+						<form:label path="creditCardExpiry">Expiry Date</form:label>
+						<form:input path="creditCardExpiry" type="date"
+							class="form-control" id="creditCardExpiry"
+							aria-describedby="creditCardExpiry"
+							placeholder="Credit Card Expiry" />
+						<small id="creditCardExpiry" class="form-text text-muted">(Enter
+							the expiry date of your credit card)</small>
+					</div>
+					<div class="form-group">
+						<form:label path="creditCardCVV">CVV</form:label>
+						<form:input path="creditCardCVV" type="text" class="form-control"
+							id="creditCardCVV" aria-describedby="creditCardCVV"
+							placeholder="Credit Card CVV" />
+						<small id="creditCardCVV" class="form-text text-muted">(Enter
+							the CVV displayed at the back of the card)</small>
+					</div>
+					<input type="submit" value="Submit" />
+
+				</form:form>
+				</p>
+
+
+			</div>
+		
+
 	</div>
 
 
@@ -72,6 +89,7 @@
 			value="${_csrf.token}" />
 		<button type="submit" class="btn">Log out</button>
 	</form>
+
 
 
 
