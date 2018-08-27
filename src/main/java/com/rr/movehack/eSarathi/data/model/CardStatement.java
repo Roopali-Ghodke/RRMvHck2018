@@ -55,4 +55,10 @@ public class CardStatement {
 	public void setAmount(String amount) {
 		this.amount = amount;
 	}
+
+	@Override
+	public String toString() {
+		return "STATEMENT = " + getCard_id() + " " + getAmount() + " " + getDate() + " " + getFrom() + " " + getTo() + " "
+				+ getIs_topup() + " ||| ";
+	}
 }
