@@ -9,12 +9,18 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 
+import com.rr.movehack.eSarathi.auth.AuthUserDetailsService;
+
 public class DataLoader {
+
+	private static final Logger LOGGER = LogManager.getLogger(DataLoader.class);
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -56,8 +62,7 @@ public class DataLoader {
 			public List extractData(ResultSet resultSetObj) throws SQLException, DataAccessException {
 				List editorList = new ArrayList();
 				while (resultSetObj.next()) {
-					System.out
-							.println("############# LOADED = " + tableName + "  COUNT = " + resultSetObj.getString(1));
+					LOGGER.debug("############# LOADED = " + tableName + "  COUNT = " + resultSetObj.getString(1));
 				}
 				return editorList;
 			}

@@ -21,6 +21,13 @@
 		</div>
 		<div class="col-md-4">
 			<p>Center details</p>
+			${cardStatements[0].card_id}
+			${cardStatements[0].date}
+			${cardStatements[0].is_topup}
+			${cardStatements[0].from}
+			${cardStatements[0].to}
+			${cardStatements[0].amount}
+			
 		</div>
 		<div class="col-md-4">
 			<p>right details</p>
