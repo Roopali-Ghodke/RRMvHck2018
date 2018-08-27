@@ -3,6 +3,7 @@ package com.rr.movehack.eSarathi.data;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -63,6 +64,19 @@ public class StatementDao {
 				"INSERT INTO card_statement ( card_id , date,is_topup , from_location , to_location , amount ) VALUES (?, ?,'N',?,?,?)",
 				card.get("id"), charge.getTravelTimeDate(), charge.getFromLocation(), charge.getToLocation(),
 				charge.getAmount());
+	}
+
+	public void topup(String userName, double amount) {
+		LOGGER.debug("############# Topping up statement = " + userName);
+
+		String userQuery = "select c.* from user u,card c where  c.user_id=u.id and u.user_name='" + userName + "'";
+
+		Map<String, Object> card = jdbcTemplate.queryForMap(userQuery);
+		LOGGER.debug("card = " + card);
+
+		jdbcTemplate.update(
+				"INSERT INTO card_statement ( card_id , date,is_topup , from_location , to_location , amount ) VALUES (?, ?,'Y',null,null,?)",
+				card.get("id"), new Date(), amount);
 	}
 
 }
