@@ -12,7 +12,7 @@
 	<div>
 		</br> </br>
 	</div>
-	<span><%@ include file="logoutlink.jsp"%></span>
+	
 	<div class="container">
 		<h2>Purchase a Card</h2>
 		<div class="row">
@@ -136,10 +136,10 @@
 		</div>
 	</div>
 
-	<form action="logout" method="post">
+<%-- 	<form action="logout" method="post">
 		<input type="hidden" name="${_csrf.parameterName}"
 			value="${_csrf.token}" />
 		<button type="submit" class="btn">Log out</button>
-	</form>
+	</form> --%>
 </body>
 </html>
