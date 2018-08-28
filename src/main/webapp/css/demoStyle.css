@@ -1,7 +1,7 @@
 .transition {
-    width: 170px;
-    height: 100px;
-    background-image:url("/movehack/images/Smart_Yatri_card.png");
+    width: 220px;
+    height: 140px;
+    background-image:url("/movehack/images/Smart_Yatri_Card_updated1.jpg");
     position: relative;
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
@@ -27,15 +27,15 @@
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes example {
-    0%   {background-image:url("/movehack/images/Smart_Yatri_card.png"); left:0px; top:0px;}
-    50%  {background-image:url("/movehack/images/Smart_Yatri_card.png"); left:300px; top:300px;}
-    100% {background-image:url("/movehack/images/Smart_Yatri_card.png"); left:0px; top:0px;}
+    0%   {background-image:url("/movehack/images/Smart_Yatri_Card_updated1.jpg"); left:0px; top:0px;}
+    50%  {background-image:url("/movehack/images/Smart_Yatri_Card_updated1.jpg"); left:300px; top:300px;}
+    100% {background-image:url("/movehack/images/Smart_Yatri_Card_updated1.jpg"); left:0px; top:0px;}
 }
 
 /* Standard syntax */
 @keyframes example {
-    0%   {background-image:url("/movehack/images/Smart_Yatri_card.png"); left:0px; top:0px;}
-    50%  {background-image:url("/movehack/images/Smart_Yatri_card.png"); left:300px; top:300px;}
-    100%   {background-image:url("/movehack/images/Smart_Yatri_card.png"); left:0px; top:0px;}
+    0%   {background-image:url("/movehack/images/Smart_Yatri_Card_updated1.jpg"); left:0px; top:0px;}
+    50%  {background-image:url("/movehack/images/Smart_Yatri_Card_updated1.jpg"); left:300px; top:300px;}
+    100%   {background-image:url("/movehack/images/Smart_Yatri_Card_updated1.jpg"); left:0px; top:0px;}
    
 }

@@ -42,7 +42,8 @@
 		callRest();
 	}
 	function ani() {
-		document.getElementById('transition').className = 'transition';
+		var element = document.getElementById('transition').className = 'transition';
+		
 	}
 	function callRest() {
 		var request = {
