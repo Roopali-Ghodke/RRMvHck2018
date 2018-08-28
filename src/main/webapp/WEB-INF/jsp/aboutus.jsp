@@ -28,32 +28,25 @@
 	</div>
 	<div id="about" class="container">
 		<div>
-			</br>
-			</br>
+			</br> </br>
 		</div>
 
 		<div id="contact" class="container-fluid bg-grey">
 			<h2>About Smart Yatri Card</h2>
 			<br>
-			<h4>Poor and fragmented mobility has been considered a key
-				contributor to restrained economic growth, deteriorated quality of
-				life, increased usage of private vehicles, congestion in cities,
-				increased cost of transportation, increase of road accidents, etc.
-				Various cities in India still have fragmented transportation systems
-				which impacts lives of millions of commuters. We need to address
-				this problem and provide a more seamless and integrated experience
-				to the commuter and enable various stakeholders in the mobility
-				ecosystem with a mechanism to effectively integrate with each other.
-				An Integrated Multi-modal Commuter Transport System will combine the
-				strengths of different transport systems and will allow the
-				commuters to have a seamless experience throughout their journey.
-				The system will also try to address typical concerns regarding
-				multi-modal transportation systems, including the coordination
-				between multiple modes of travel, integration and settlement
-				procedures, degree of certainty to reach a destination in defined
-				time, level of comfort, etc.</h4>
+			<h4>
+				"Smart Yatri Card" targets this problem statement</br>
+				</br>
+				</br>
+				<p>"Common Ticketing System for entire door-to-door journey for
+					selected combination of modes including the informal/formal last
+					mile options (including private ride sharing options)."​</p>
+				<p>"The system should allow integrated and inter-operable
+					payment mechanism for the commuter to pay just one time for the
+					entire journey"</p>
+			</h4>
 			<br>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+			<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 				do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 				enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
 				ut aliquip ex ea commodo consequat. Excepteur sint occaecat
@@ -62,7 +55,7 @@
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
 				veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
 				ea commodo consequat.</p>
-			<br>
+			<br> -->
 			<c:url value="/contact" var="contactUrl" />
 			<a href="${contactUrl }">
 				<button class="btn btn-default btn-lg">Get in Touch</button>
@@ -71,8 +64,7 @@
 	</div>
 
 	<div>
-		</br>
-		</br>
+		</br> </br>
 	</div>
 
 	<div id="contact" class="container-fluid text-center by-grey">
