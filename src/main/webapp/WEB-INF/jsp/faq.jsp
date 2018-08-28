@@ -3,7 +3,7 @@
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-<title>Hello World!</title>
+<title>Smart Yatri Card</title>
 </head>
 <body>
 	<span><%@ include file="navigationtab.jsp"%></span>

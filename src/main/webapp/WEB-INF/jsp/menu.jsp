@@ -3,7 +3,7 @@
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-<title>Details</title>
+<title>Smart Yatri Card</title>
 
 <link rel="stylesheet" href="/movehack/css/menuStyle.css" />
 </head>
