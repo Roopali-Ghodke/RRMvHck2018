@@ -1,7 +1,10 @@
 card_id , date,is_topup , from_location , to_location , amount ,transport
 1,1/1/2018,Y,,,100,
-1,2/1/2018,N,Sector 3 Noida,Mayur Vihar Noida,20,Bus A1
-1,2/1/2018,N,Mayur Vihar Noida,Rajiv Chowk Delhi,30,Metro
-1,2/1/2018,N,Rajiv Chowk Delhi,Mayur Vihar Noida,30,Metro
-1,2/1/2018,N,Mayur Vihar Noida,Sector 3 Noida,20,Bus B3
+1,2/1/2018,N,Sector 62 Noida,Golf Course Metro Station,10,Bus 323
+1,2/1/2018,N,Golf Course Metro Station,Mandi House,20,Metro Blue Line
+1,2/1/2018,N,Mandi House,Central Secretariat,20,Metro Violet Line
+1,2/1/2018,N,Central Secretariat,Mandi House,20,Metro Violet Line
+1,2/1/2018,N,Mandi House,Golf Course Metro Station,20,Metro Blue Line
+1,2/1/2018,N,Golf Course Metro Station,Sector 62 Noida,10,Bus 323
+1,3/1/2018,Y,,,100,
 2,2/2/2018,Y,,,200,

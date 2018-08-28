@@ -39,7 +39,7 @@
 							<th>Transport</th>
 							<th>Source (From Station)</th>
 							<th>Destination (To Station)</th>
-							<th>Amount</th>
+							<th>Amount (&#8377;)</th>
 						</tr>
 					</thead>
 					<c:forEach items="${cardStatements}" var="cardStatements">

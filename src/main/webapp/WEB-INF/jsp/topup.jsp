@@ -42,7 +42,7 @@
 								on card)</small>
 						</div>
 						<div class="form-group">
-							<form:label path="amount">Add Amount</form:label>
+							<form:label path="amount">Add Amount (&#8377;)</form:label>
 							<form:errors path="amount" cssClass="error" />
 							<form:input path="amount" type="number" class="form-control"
 								id="amount" aria-describedby="amount" placeholder="100.00" />
@@ -78,6 +78,15 @@
 								placeholder="Credit Card CVV" />
 							<small id="creditCardCVV" class="form-text text-muted">(Enter
 								the CVV displayed at the back of the card)</small>
+						</div>
+						<div class="form-group">
+							<form:label path="address">Address</form:label>
+							<form:errors path="address" cssClass="error" />
+							<form:input path="address" type="text" class="form-control"
+								id="address" aria-describedby="creditCardCVV"
+								placeholder="Credit Card CVV" />
+							<small id="address" class="form-text text-muted">(Enter
+								billing address of credit card)</small>
 						</div>
 						<input type="submit" value="Submit" />
 	
