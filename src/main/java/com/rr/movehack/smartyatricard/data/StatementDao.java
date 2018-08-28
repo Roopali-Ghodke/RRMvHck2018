@@ -63,9 +63,9 @@ public class StatementDao {
 		LOGGER.debug("card = " + card);
 
 		jdbcTemplate.update(
-				"INSERT INTO card_statement ( card_id , date,is_topup , from_location , to_location , amount ) VALUES (?, ?,'N',?,?,?)",
+				"INSERT INTO card_statement ( card_id , date,is_topup , from_location , to_location , amount,transport ) VALUES (?, ?,'N',?,?,?,?)",
 				card.get("id"), charge.getTravelTimeDate(), charge.getFromLocation(), charge.getToLocation(),
-				charge.getAmount());
+				charge.getAmount(),charge.getTransportName());
 	}
 
 	public void topup(String userName, double amount) {

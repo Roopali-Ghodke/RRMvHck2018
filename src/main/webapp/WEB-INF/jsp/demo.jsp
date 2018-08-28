@@ -80,13 +80,13 @@
 		</div>
 		<div class="well">
 			<h6>
-				Use Case: Person with card number <input id="cardNumber" type="text"></input>
+				Use Case: Person with card number <input id="cardNumber" type="text" value="1234567890"></input>
 				needs to travel using transport <input id="transport"
-					class="inputtransport" type="text"
+					class="inputtransport" type="text" value="Bus 392"
 					onkeyup="document.getElementById('transport_div').innerHTML = this.value"></input>
-				From station <input id="from" type="text"></input> to station <input
-					id="to" type="text"></input>. As per transport system, ticket price
-				will be Rs. <input id="amount" type="text"></input> <br />
+				From station <input id="from" type="text" value="Sector 62 Noida"></input> to station <input
+					id="to" type="text" value="Sector 3 Noida"></input>. As per transport system, ticket price
+				will be &#8377;<input id="amount" type="text" value="10"></input> <br />
 				<!--  <input
 					id="submit" type="button" onclick="callRest()" value="Tap !"></input> -->
 			</h6>
