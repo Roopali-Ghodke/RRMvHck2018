@@ -11,3 +11,7 @@ This will start the server with Smart Yatri Card application deployed. Then go t
 http://localhost:8090/movehack
 
 Test user/password: roopali/asd
+
+To simulate a travel using Smart Yatri Card, use below simulator link
+
+http://localhost:8090/movehack/demo
