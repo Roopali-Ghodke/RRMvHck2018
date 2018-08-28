@@ -2,7 +2,7 @@
 
 ## How to execute
 
-This application is build in JAVA language. So in order to execute this, JAVA JRE is needed. With JAVA JRE, execute below command.
+This application is built in JAVA language. So in order to execute this, JAVA JRE is needed. With JAVA JRE, execute below command.
 
 `java -jar smart-yatri-card-executable.jar`
 
