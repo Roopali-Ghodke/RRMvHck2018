@@ -43,7 +43,7 @@
 
 							<a href="signup.do">
 								<button type="button" class="btn btn-primary"
-									data-toggle="button" aria-pressed="false" autocomplete="off">Sign
+									aria-pressed="false" autocomplete="off">Sign
 									Up</button>
 							</a>
 						</div>
