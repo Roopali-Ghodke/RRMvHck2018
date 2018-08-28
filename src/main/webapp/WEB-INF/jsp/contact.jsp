@@ -27,7 +27,7 @@
 	<div>
 		</br> </br>
 	</div>
-	<!-- <div id="about" class="container">
+	<div id="about" class="container">
 			<div class="row">
 				<div class="container-fluid bg-grey">
 					<h2 class="text-center">CONTACT US</h2>
@@ -45,7 +45,7 @@
 								smartyatricard@something.com
 							</p>
 						</div>
-						<div class="col-sm-7">
+						<!-- <div class="col-sm-7">
 							<div class="row">
 								<div class="col-sm-6 form-group">
 									<label for="name">Name </label> <input type="text"
@@ -67,10 +67,10 @@
 									<button class="btn btn-default pull-right" type="submit">Send</button>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div> 
 </body>
 </html>

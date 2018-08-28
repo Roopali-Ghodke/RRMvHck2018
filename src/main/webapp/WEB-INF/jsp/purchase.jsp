@@ -28,13 +28,13 @@
 			<div class="col-md-6">
 				<p>
 					<c:if test="${alreadyPurchased eq 'true'}">
-						<p>Already card purchased.</p>
+						<p>Smart Yatri card is already purchased. You will receive card soon. Once received register card, top up amount & start using yrou Smart Yatri Card.</p>
 					</c:if>
 					<c:if test="${alreadyPurchased ne 'true'}">
 						<c:if test="${status eq 'success'}">
 							<p>Purchase done successfully. Card will be delivered soon.
-								Once delivered please register card before using on transport &
-								top up amount.</p>
+								Once delivered please register card  &
+								top up amount before using on transport.</p>
 						</c:if>
 
 						<c:if test="${status ne 'success'}">

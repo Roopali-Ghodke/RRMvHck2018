@@ -48,6 +48,9 @@ public class RegistrationController {
 
 		userCardDao.register(auth.getName(), command.getCardNumber());
 		mav.addObject("status", "success");
+		mav.addObject("alreadyRegistered", true);
+		mav.addObject("alreadyPurchased", true);
+
 		return mav;
 	}
 

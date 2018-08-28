@@ -65,17 +65,18 @@
 							<div class="profile-info-value">
 								<span> <c:if
 										test="${(not empty userProfile['is_purchased']) && (userProfile['is_purchased'] == 'Y')}">
-										<c:if
-											test="${(not empty userProfile['card_number']) && (userProfile['is_purchased'] == 'Y')}">
-										${userProfile['card_number'] }
-									</c:if>
-										<c:if
-											test="${(empty userProfile['card_number']) || (userProfile['is_purchased'] == 'N')}">
-										Please register the card
-									</c:if>
-									</c:if> <c:if
+											<c:if
+												test="${(not empty userProfile['card_number']) && (userProfile['is_purchased'] == 'Y')}">
+												${userProfile['card_number'] }
+											</c:if>
+											<c:if
+												test="${(empty userProfile['card_number']) || (userProfile['is_purchased'] == 'N')}">
+											Smart Yatri Card not yet registered. Please register the card & top up amount to use card.
+										</c:if>
+									</c:if> 
+									<c:if
 										test="${(empty userProfile['is_purchased']) || (userProfile['is_purchased'] == 'N')}">
-									Please Purchase a card.
+									 Please Purchase a Smart Yatri Card.
 								</c:if>
 								</span>
 							</div>

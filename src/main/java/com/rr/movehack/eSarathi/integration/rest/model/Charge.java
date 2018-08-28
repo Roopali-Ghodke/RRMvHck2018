@@ -62,4 +62,10 @@ public class Charge {
 		this.cardNumber = cardNumber;
 	}
 
+	@Override
+	public String toString() {
+		return getCardNumber() + " " + getFromLocation() + " " + getToLocation() + " " + getTransportName() + " "
+				+ getTravelTimeDate() + " " + getAmount();
+	}
+
 }

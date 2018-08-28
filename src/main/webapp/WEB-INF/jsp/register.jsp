@@ -27,21 +27,21 @@
 				<p>
 				<p>
 
-					<c:if test="${alreadyRegistered eq 'true'}">
-						<p>Already registered</p>
+					<c:if test="${status ne 'success' && alreadyRegistered eq 'true'}">
+						<p>Smart Yatri Card is already registered. Check statement to find out current balance or top up amount.</p>
 					</c:if>
 
-					<c:if test="${alreadyPurchased ne 'true'}">
-						<p>Card not yet purchased</p>
+					<c:if test="${status ne 'success' && alreadyPurchased ne 'true'}">
+						<p>You haven't yet purchased Smart Yatri Card. Please purchase a Smart Yatri Card & return to this screen to register card.</p>
 					</c:if>
 					<c:if test="${status eq 'success'}">
-						<p>Registration done successfully</p>
+						<p>Registration of Smart Yatri Card done successfully. Please top up amount on the card & start using the card. Happy journey !</p>
 					</c:if>
 					<c:if
 						test="${alreadyRegistered ne 'true' && status ne 'success' && alreadyPurchased eq 'true'}">
 
 						<h3>Enter registration details</h3>
-
+						<p>Please enter number from the Smart Yatri Card you received. You can find number on back of Smart Yatri Card.</p>
 						<c:url value="/registercard" var="registerUrl" />
 						<form:form method="POST" action="${registerUrl}"
 							modelAttribute="command">
@@ -62,7 +62,7 @@
 				</p>
 			</div>
 			<div class="col-md-4">
-				<p>right details</p>
+				<p></p>
 			</div>
 		</div>
 	</div>
