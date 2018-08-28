@@ -64,6 +64,7 @@
 									<small id="creditCardNumber" class="form-text text-muted">(Enter
 										Credit Card Number displayed on your card)</small>
 								</div>
+								<form:errors path="creditCardNumber" cssClass="error" />
 
 								<div class="form-group">
 									<form:label path="creditCardExpiry">Expiry Date</form:label>

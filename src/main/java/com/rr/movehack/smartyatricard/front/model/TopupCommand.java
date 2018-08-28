@@ -1,11 +1,25 @@
 package com.rr.movehack.smartyatricard.front.model;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class TopupCommand {
+	@NotNull
+	@Size(min=16, max=16)
 	private String creditCardNumber;
 	private String creditCardExpiry;
+	@NotNull
+	@Size(min=3, max=6)
 	private String creditCardCVV;
+	@NotNull
+	@Size(min=2, max=100)
 	private String name;
+	@NotNull
+	@Min(value=10)
 	private double amount;
+	@NotNull
+	@Size(min=2)
 	private String address;
 
 	public String getCreditCardNumber() {

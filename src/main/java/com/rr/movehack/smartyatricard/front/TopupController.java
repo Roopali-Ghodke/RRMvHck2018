@@ -2,12 +2,15 @@ package com.rr.movehack.smartyatricard.front;
 
 import java.util.Map;
 
+import javax.validation.Valid;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,7 +18,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.rr.movehack.smartyatricard.data.StatementDao;
 import com.rr.movehack.smartyatricard.data.UserCardDao;
-import com.rr.movehack.smartyatricard.front.model.RegistrationCommand;
 import com.rr.movehack.smartyatricard.front.model.TopupCommand;
 
 @Controller
@@ -35,8 +37,12 @@ public class TopupController {
 	}
 
 	@RequestMapping("/pay")
-	public ModelAndView topup(@ModelAttribute("command") TopupCommand command) {
+	public ModelAndView topup(@Valid @ModelAttribute("command") TopupCommand command,  BindingResult bindingResult) {
 		LOGGER.info("Doing payment...");
+		if (bindingResult.hasErrors()) {
+            return new ModelAndView("topup", "command", command);
+        }
+		
 		ModelAndView mav = new ModelAndView("topup", "command", new TopupCommand());
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		statementDao.topup(auth.getName(), command.getAmount());
