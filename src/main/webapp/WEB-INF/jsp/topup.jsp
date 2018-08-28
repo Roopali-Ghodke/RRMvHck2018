@@ -35,6 +35,7 @@
 					<form:form method="POST" action="${payUrl}" modelAttribute="command">
 						<div class="form-group">
 							<form:label path="name">CardHolder Name</form:label>
+							<form:errors path="name" cssClass="error" />
 							<form:input path="name" type="text" class="form-control" id="name"
 								aria-describedby="name" placeholder="Cardholder Name" />
 							<small id="name" class="form-text text-muted"> (As written
@@ -42,6 +43,7 @@
 						</div>
 						<div class="form-group">
 							<form:label path="amount">Add Amount</form:label>
+							<form:errors path="amount" cssClass="error" />
 							<form:input path="amount" type="number" class="form-control"
 								id="amount" aria-describedby="amount" placeholder="100.00" />
 							<small id="amount" class="form-text text-muted">(Add
@@ -49,6 +51,7 @@
 						</div>
 						<div class="form-group">
 							<form:label path="creditCardNumber">Credit Card Number</form:label>
+							<form:errors path="creditCardNumber" cssClass="error" />
 							<form:input path="creditCardNumber" type="number"
 								class="form-control" id="creditCardNumber"
 								aria-describedby="creditCardNumber"
@@ -56,8 +59,10 @@
 							<small id="creditCardNumber" class="form-text text-muted">(Enter
 								Credit Card Number displayed on your card)</small>
 						</div>
+						
 						<div class="form-group">
 							<form:label path="creditCardExpiry">Expiry Date</form:label>
+							<form:errors path="creditCardExpiry" cssClass="error" />
 							<form:input path="creditCardExpiry" type="date"
 								class="form-control" id="creditCardExpiry"
 								aria-describedby="creditCardExpiry"
@@ -67,6 +72,7 @@
 						</div>
 						<div class="form-group">
 							<form:label path="creditCardCVV">CVV</form:label>
+							<form:errors path="creditCardCVV" cssClass="error" />
 							<form:input path="creditCardCVV" type="text" class="form-control"
 								id="creditCardCVV" aria-describedby="creditCardCVV"
 								placeholder="Credit Card CVV" />
