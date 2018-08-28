@@ -57,20 +57,22 @@
 			<p>
 				<form:label path="city" for="city">City</form:label>
 				<form:select path="city" name="city">
-					<option value="newdelhi">New Delhi</option>
-					<option value="connaught">Connaught Place</option>
-					<option value="gurgaon">Gurgaon</option>
-					<option value="faridabad">Faridabad</option>
+					<option value="New Delhi">New Delhi</option>	
+					<option value="Mumbai">Mumbai</option>
+					<option value="Gurgaon">Gurgaon</option>
+					<option value="Faridabad">Faridabad</option>
+					<option value="Pune">Pune</option>
 				</form:select>
 			</p>
 
 			<p>
 				<form:label path="state" for="state">State</form:label>
 				<form:select path="state" name="state">
-					<option value="haryana">Haryana</option>
-					<option value="punjab">Punjab</option>
-					<option value="karnataka">Karnataka</option>
-					<option value="maharashtra">Maharashtra</option>
+				<option value="Delhi">Delhi</option>
+					<option value="Maharashtra">Maharashtra</option>
+					<option value="Haryana">Haryana</option>
+					<option value="Punjab">Punjab</option>
+					<option value="Karnataka">Karnataka</option>
 				</form:select>
 			</p>
 
