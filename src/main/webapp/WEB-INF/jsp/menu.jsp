@@ -9,6 +9,7 @@
 </head>
 <body>
 	
+	
 	<div class="vertical-menu">
 		<a href="profile.do">Profile</a> 
 		<a href="purchase.do">Purchase A Card</a>
@@ -17,6 +18,8 @@
 		<a href="statement.do">Statement</a> 
 		<a href="faq">FAQ</a> 
 		<a href="contactus">Contact Us</a>
+		<c:url value="/logout" var="logoutUrl" />
+		<a href="${logoutUrl }">Logout</a>
 	</div>
 	
 
